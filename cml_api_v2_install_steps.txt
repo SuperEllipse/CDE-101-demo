@@ -1,0 +1,24 @@
+!pip3 install https://rest.$DOMAIN/api/v2/python
+
+OR
+
+!pip3 install https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python
+
+Does not seem to be working:
+
+Collecting https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python
+  ERROR: HTTP error 404 while getting https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python
+  ERROR: Could not install requirement https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python because of error 404 Client Error: Not Found for url: https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python
+ERROR: Could not install requirement https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python because of HTTP error 404 Client Error: Not Found for url: https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python for URL https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi.cloudera.site/api/v2/python
+
+
+!pip3 install https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi/api/v2/python
+
+Collecting https://rest.ml-18a296af-d86.demo-aws.ylcu-atmi/api/v2/python
+  WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f6cc22828d0>: Failed to establish a new connection: [Errno -2] Name or service not known',)': /api/v2/python
+  WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f6cc22824e0>: Failed to establish a new connection: [Errno -2] Name or service not known',)': /api/v2/python
+  WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f6cc2282588>: Failed to establish a new connection: [Errno -2] Name or service not known',)': /api/v2/python
+  WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f6cc2282e80>: Failed to establish a new connection: [Errno -2] Name or service not known',)': /api/v2/python
+  WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f6cc2282898>: Failed to establish a new connection: [Errno -2] Name or service not known',)': /api/v2/python
+ERROR: Could not install packages due to an EnvironmentError: HTTPSConnectionPool(host='rest.ml-18a296af-d86.demo-aws.ylcu-atmi', port=443): Max retries exceeded with url: /api/v2/python (Caused by NewConnectionError('<pip._vendor.urllib3.connection.VerifiedHTTPSConnection object at 0x7f6cc223d0f0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
