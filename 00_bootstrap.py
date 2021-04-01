@@ -1,3 +1,6 @@
+### Installing Requirements
+!pip3 install -r requirements.txt
+
 import os
 import time
 import json
@@ -30,16 +33,20 @@ os.environ['STORAGE'] = storage
 
 !rm /home/cdsw/PPP-Over-150k-ALL.csv /home/cdsw/PPP-Sub-150k-TX.csv config.yaml
 
+### CDE CLI Setup
+
+!mkdir .cde
+
 ### Recreating Yaml file with your credentials:
 
 dict_yaml = {"user" : os.environ["WORKLOAD_USER"], 
              "vcluster-endpoint": os.environ["CDE_VC_ENDPOINT"]}
 
-with open(r'config.yaml', 'w') as file:
+with open(r'.cde/config.yaml', 'w') as file:
   documents = yaml.dump(dict_yaml, file)
 
 ### Downloading the CLI tool
-!mkdir .cde
+
 #!wget $CDE_CLI_linux -P /home/cdsw/.local/bin
 #mv cde /home/cdsw/.local/bin
 #!chmod +x /home/cdsw/.local/bin/cde
