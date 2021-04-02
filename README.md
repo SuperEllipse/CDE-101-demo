@@ -26,14 +26,14 @@ Log into the CDE experience and create a new resource from the "Resources" tab. 
 
 A resource allows you to upload files and dependencies for reuse. This makes managing spark-submits easier.
 
-Upload the files located in the "manual_jobs" directory of this project in your resource. 
+Upload the files located in the "manual_jobs" directory of this project in your CDE resource. 
 
+Next, we will create three jobs with the following settings. 
 
-Next, we will create three jobs with the following settings. For each of these, go to the "Jobs" tab and select "Create Job".
+* Open each file and manually change table names to something that you can remember and is unique enough. 
+* For each of these, go to the "Jobs" tab and select "Create Job". Choose type "Spark" and pick the corresponding files from your resource.
 
-Choose type "Spark" and pick the corresponding files from your resource.
-
-It is important that you stick to the following nameing convention. Feel free to choose the remaining job settings as you wish e.g. scheduling options. 
+It is important that you stick to the following naming convention. Do not schedule the jobs as we will launch them with Airflow in the next section. 
 
 1. LC_data_exploration:
     - Name: "LC_data_exploration"
@@ -50,19 +50,20 @@ It is important that you stick to the following nameing convention. Feel free to
     - Application File: "LC_ml_model.py"
     - Python Version: "Python 3"
     
+You can now manually launch each of the above. Just make sure you run them in order. 
+
 
 #### Section 2 - Creating and scheduling an Airflow Job via CDE
 
-CDE uses Airflow for Job Orchestration. In order to create an Airflow job, go to the "Jobs" page and create one of type "Airflow".
+CDE uses Airflow for Job Orchestration. 
 
-Name the job as you'd like and choose the "LC_airflow_config.py" file. Execute or optionally schedule the job.
+First, edit the "LC_airflow_config.py" file by setting the DAG name (line 22) to the name you will use for the Airflow Job.
 
-Once it has been created, open the job from the "Jobs" tab and navigate to the "Airflow UI" tab. 
+Next, set each "job_name" (lines 37, 43, 49) to the same job names you used in Section 1. They have to match or it won't work.  
 
-Next, click on the "Code" icon. This is the Airflow DAG we contained in the "LC_airflow_config.py" file. 
+In order to create an Airflow job, go to the "Jobs" page and create one with type "Airflow". Name the job as you'd like and choose the "LC_airflow_config.py" file. Execute or optionally schedule the job. Once it has been created, open the job from the "Jobs" tab and navigate to the "Airflow UI" tab. 
 
-Notice there are two types of operators: CDWOperator and CDEJobRunOperator. You can use both to trigger execution from the CDE and CDW services (with Spark and Hive respectively). More operators will be added soon including the ability to customize these. 
-
+Next, click on the "Code" icon. This is the Airflow DAG we contained in the "LC_airflow_config.py" file. Notice there are two types of operators: CDWOperator and CDEJobRunOperator. You can use both to trigger execution from the CDE and CDW services (with Spark and Hive respectively). More operators will be added soon including the ability to customize these. 
 
 
 #### Section 3 - Creating and scheduling Spark Jobs via the CDE CLI from CML
