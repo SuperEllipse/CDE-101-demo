@@ -38,16 +38,18 @@ It is important that you stick to the following nameing convention. Feel free to
 1. LC_data_exploration:
     - Name: "LC_data_exploration"
     - Application File: "LC_data_exploration.py"
+    - Python Version: "Python 3"
     
 2. LC_KPI_reporting:
     - Name: "LC_KPI_reporting:
     - Application File: "LC_KPI_reporting.py"
+    - Python Version: "Python 3"
     
 3. LC_ml_scoring:
     - Name: "LC_ml_scoring"
     - Application File: "LC_ml_model.py"
+    - Python Version: "Python 3"
     
-
 
 #### Section 2 - Creating and scheduling an Airflow Job via CDE
 
