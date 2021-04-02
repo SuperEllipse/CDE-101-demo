@@ -15,6 +15,10 @@ The project includes three sections:
 3. Creating and scheduling Spark Jobs via the CDE CLI from Cloudera Machine Learning ([CML](https://docs.cloudera.com/machine-learning/cloud/index.html))
 
 
+#### Peoject Setup
+
+1. Clone this github repository locally in order to have the files needed to run through Sections 1 and 2. The files are located in the "manual_jobs" folder.
+
 
 #### Section 1 - Creating and scheduling a simple Spark Job
 
