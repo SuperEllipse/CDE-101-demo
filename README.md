@@ -55,7 +55,7 @@ You can now manually launch each of the above. Just make sure you run them in or
 
 #### Section 2 - Creating and scheduling an Airflow Job via CDE
 
-CDE uses Airflow for Job Orchestration. 
+CDE uses Airflow for Job Orchestration. Follow these steps to create a CDE job of type "Airflow".
 
 * First, edit the "LC_airflow_config.py" file by setting the DAG name (line 22) to the name you will use for the Airflow Job.
 
