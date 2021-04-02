@@ -61,6 +61,10 @@ First, edit the "LC_airflow_config.py" file by setting the DAG name (line 22) to
 
 Next, set each "job_name" (lines 37, 43, 49) to the same job names you used in Section 1. They have to match or it won't work.  
 
+Finally, ensure the "cli_conn_id" variable at line 61 is up to date. This is used to issue queries to Hive in CDW from the Airflow Job. 
+To configure a new connection go to the CDE VPC and select "Cluster Details". Then open the Airflow UI and click on "Admin" -> "Connection".
+Click on "Add a new record" and use [these instructions](https://community.cloudera.com/t5/Community-Articles/Airflow-Job-scheduling-with-CDE-and-CDW-ETL-jobs/ta-p/311615) to configure a new connection. 
+
 In order to create an Airflow job, go to the "Jobs" page and create one with type "Airflow". Name the job as you'd like and choose the "LC_airflow_config.py" file. Execute or optionally schedule the job. Once it has been created, open the job from the "Jobs" tab and navigate to the "Airflow UI" tab. 
 
 Next, click on the "Code" icon. This is the Airflow DAG we contained in the "LC_airflow_config.py" file. Notice there are two types of operators: CDWOperator and CDEJobRunOperator. You can use both to trigger execution from the CDE and CDW services (with Spark and Hive respectively). More operators will be added soon including the ability to customize these. 
