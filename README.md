@@ -12,7 +12,7 @@ The project includes three sections:
 
 1. Creating and scheduling a simple Spark Job via the Cloudera Data Engineering Experience ([CDE](https://docs.cloudera.com/data-engineering/cloud/index.html))
 2. Creating and scheduling an Airflow Job via CDE
-3. Creating and scheduling Spark Jobs via the CDE CLI from Cloudera Machine Learning ([CML](https://docs.cloudera.com/machine-learning/cloud/index.html))
+3. Creating and scheduling Spark Jobs via the CDE CLI via Cloudera Machine Learning ([CML](https://docs.cloudera.com/machine-learning/cloud/index.html))
 
 
 #### Peoject Setup
