@@ -1,4 +1,4 @@
-# CDE CLI in CML
+# CDE Demo
 
 This project is an entry level tutorial for CDE.
 
